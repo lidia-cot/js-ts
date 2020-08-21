@@ -10,9 +10,6 @@ const server: express.Application = express();
 server.use(express.json());
 server.use(express.urlencoded());
 
-server.get('/', (request: express.Request, response: express.Response) => {
-    response.sendfile('login.html');
-});
 
 server.post('/sum',(request: express.Request, response: express.Response) => {
     response.send(`Your result after summing is: ${+request.body.param1 + +request.body.param2}`);

@@ -54,30 +54,30 @@ var trial = {
 };
 
  async function main() {
-    //var options = [sum, subtract, multiply, divide];
+    var options = [sum, subtract, multiply, divide];
 
-    // options.forEach((element: any) => {
-    //     try {
-    //         let parsedBody = rp(options[element]);
-    //         console.log(parsedBody);
-    //     } catch(err) {
-    //         console.log(err);
-    //     }
-    // })
+    options.forEach((element: any) => {
+        try {
+            let parsedBody = rp(options[element]);
+            console.log(parsedBody);
+        } catch(err) {
+            console.log(err);
+        }
+    })
 
-    // try {
-    //     let parsedBody = await rp(sum);
-    //     console.log(parsedBody);
-    //     } catch(err) {
-    //         console.log(err);
-    //     }
+    try {
+        let parsedBody = await rp(sum);
+        console.log(parsedBody);
+        } catch(err) {
+            console.log(err);
+        }
 
-    //rp.post(path, {json:true, body> {param1:"2", param2: "3"}});
-    let promiseArray = [];
+    // rp.post(path, {json:true, body> {param1:"2", param2: "3"}});
+    // let promiseArray = [];
 
-    promiseArray.push(rp.post(path, {json:true, body> {param1:"2", param2: "3"}}));
+    // promiseArray.push(rp.post(path, {json:true, body> {param1:"2", param2: "3"}}));
 
-    let result = await Promise.all(promiseArray);
+    // let result = await Promise.all(promiseArray);
 }
 
 
